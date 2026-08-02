@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutz – Ferienhaus Gehrken</title>
+<style>
+  :root{
+    --deep-teal:#1c4451;
+    --deep-teal-2:#163640;
+    --cream:#f2ead9;
+    --cream-2:#e9ddc4;
+    --forest:#48633f;
+    --forest-dark:#374d2f;
+    --ink:#28322f;
+    --ink-soft:#5a6459;
+    --gold:#c8a24a;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Source Serif Pro', Georgia, 'Times New Roman', serif;
+    color:var(--ink);
+    background:var(--cream);
+  }
+  h1,h2,h3,.brand,.nav a,.btn,.card-label{
+    font-family:'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  }
+  .eyebrow{
+    font-family:'Jost','Helvetica Neue',Arial,sans-serif;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    font-size:.72rem;
+    font-weight:500;
+  }
+  p, .nav a, .btn, .content-shell a{
+    font-family:'Jost','Helvetica Neue',Arial,sans-serif;
+  }
+
+  header{
+    background:linear-gradient(180deg,var(--deep-teal) 0%, var(--deep-teal-2) 100%);
+    color:#fff;
+    padding:22px 6vw 0;
+  }
+  .header-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:16px;
+    padding-bottom:18px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .brand svg{flex-shrink:0;}
+  .brand-text{
+    font-size:1.7rem;
+    letter-spacing:.02em;
+  }
+  .brand-text span{
+    display:block;
+    font-family:'Jost',sans-serif;
+    font-size:.62rem;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-top:2px;
+  }
+  nav.main-nav{
+    display:flex;
+    gap:34px;
+    flex-wrap:wrap;
+  }
+  nav.main-nav a{
+    color:#eef3ee;
+    text-decoration:none;
+    font-size:.85rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    padding-bottom:6px;
+    border-bottom:2px solid transparent;
+    transition:border-color .25s ease, color .25s ease;
+  }
+  nav.main-nav a:hover, nav.main-nav a:focus-visible{
+    border-color:var(--gold);
+    color:#fff;
+  }
+
+  main{
+    padding:70px 6vw 100px;
+    background:var(--cream);
+  }
+  .content-shell{
+    max-width:980px;
+    margin:0 auto;
+    background:#fbf7ec;
+    padding:50px 46px;
+    box-shadow:0 20px 50px -28px rgba(20,30,20,.35);
+  }
+  .content-shell .eyebrow{color:var(--forest); margin-bottom:10px;}
+  .content-shell h1{
+    font-size:clamp(2rem,3.2vw,2.7rem);
+    margin:0 0 24px;
+    color:var(--deep-teal);
+  }
+  .content-shell p,
+  .content-shell a{
+    color:var(--ink-soft);
+    line-height:1.8;
+    font-size:1rem;
+  }
+  .content-shell strong{color:var(--deep-teal);}
+  .content-shell a{color:var(--forest); text-decoration:none;}
+  .content-shell a:hover{color:var(--forest-dark); text-decoration:underline;}
+
+  footer{
+    background:var(--deep-teal-2);
+    color:#c9d3cc;
+    padding:50px 6vw 26px;
+  }
+  .footer-top{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:30px;
+    max-width:1180px;
+    margin:0 auto 30px;
+    padding-bottom:30px;
+    border-bottom:1px solid rgba(255,255,255,.12);
+  }
+  .footer-brand{font-family:'Cormorant Garamond',serif; font-size:1.3rem; color:#fff;}
+  .footer-links{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    font-family:'Jost',sans-serif;
+    font-size:.82rem;
+    letter-spacing:.06em;
+  }
+  .footer-links a{color:#c9d3cc; text-decoration:none;}
+  .footer-links a:hover{color:#fff;}
+  .footer-bottom{
+    text-align:center;
+    font-family:'Jost',sans-serif;
+    font-size:.75rem;
+    letter-spacing:.06em;
+    color:#8fa196;
+  }
+
+  @media (max-width:880px){
+    nav.main-nav{gap:20px; justify-content:center; width:100%;}
+    .content-shell{padding:36px 24px;}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <div class="brand">
+      <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+        <path d="M23 6L6 20V40H18V28H28V40H40V20L23 6Z" stroke="#f2ead9" stroke-width="2" fill="none"/>
+        <path d="M4 34 Q11 28 18 34 T32 34" stroke="#c8a24a" stroke-width="2" fill="none"/>
+      </svg>
+      <div class="brand-text">Haus am Möhnesee<span>Familie Gehrken</span></div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Startseite</a>
+      <a href="das_haus.html">Das Haus</a>
+      <a href="infos.html">Infos</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="content-shell">
+    <div class="eyebrow">Datenschutz</div>
+    <h1>Allgemeine Datenschutzerklärung</h1>
+
+    <p>Durch die Nutzung unserer Website erklären Sie sich mit der Erhebung, Verarbeitung und Nutzung von Daten gemäß der nachfolgenden Beschreibung einverstanden. Unsere Website kann grundsätzlich ohne Registrierung besucht werden. Dabei werden Daten wie beispielsweise aufgerufene Seiten bzw. Namen der abgerufenen Datei, Datum und Uhrzeit zu statistischen Zwecken auf dem Server gespeichert, ohne dass diese Daten unmittelbar auf Ihre Person bezogen werden. Personenbezogene Daten, insbesondere Name, Adresse oder E-Mail-Adresse werden soweit möglich auf freiwilliger Basis erhoben. Ohne Ihre Einwilligung erfolgt keine Weitergabe der Daten an Dritte.</p>
+
+    <p><strong>Beschwerderecht bei der Aufsichtsbehörde</strong></p>
+    <p>Sie haben gemäß Art. 77 DSGVO das Recht, sich bei der Aufsichtsbehörde zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten nicht rechtsmäßig erfolgt.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-bottom">© 2026 Ferienhaus Gehrken · Ferien am Möhnesee</div>
+</footer>
+</body>
+</html>

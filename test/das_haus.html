@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Das Haus – Ferienhaus Gehrken</title>
+<style>
+  :root{
+    --deep-teal:#1c4451;
+    --deep-teal-2:#163640;
+    --cream:#f2ead9;
+    --cream-2:#e9ddc4;
+    --forest:#48633f;
+    --forest-dark:#374d2f;
+    --ink:#28322f;
+    --ink-soft:#5a6459;
+    --gold:#c8a24a;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Source Serif Pro', Georgia, 'Times New Roman', serif;
+    color:var(--ink);
+    background:var(--cream);
+  }
+  h1,h2,h3,.brand,.nav a,.btn,.card-label{
+    font-family:'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  }
+  .eyebrow{
+    font-family:'Jost','Helvetica Neue',Arial,sans-serif;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    font-size:.72rem;
+    font-weight:500;
+  }
+  p, .nav a, .btn, .content-shell li{
+    font-family:'Jost','Helvetica Neue',Arial,sans-serif;
+  }
+
+  header{
+    background:linear-gradient(180deg,var(--deep-teal) 0%, var(--deep-teal-2) 100%);
+    color:#fff;
+    padding:22px 6vw 0;
+  }
+  .header-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:16px;
+    padding-bottom:18px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .brand svg{flex-shrink:0;}
+  .brand-text{
+    font-size:1.7rem;
+    letter-spacing:.02em;
+  }
+  .brand-text span{
+    display:block;
+    font-family:'Jost',sans-serif;
+    font-size:.62rem;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-top:2px;
+  }
+  nav.main-nav{
+    display:flex;
+    gap:34px;
+    flex-wrap:wrap;
+  }
+  nav.main-nav a{
+    color:#eef3ee;
+    text-decoration:none;
+    font-size:.85rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    padding-bottom:6px;
+    border-bottom:2px solid transparent;
+    transition:border-color .25s ease, color .25s ease;
+  }
+  nav.main-nav a:hover, nav.main-nav a:focus-visible{
+    border-color:var(--gold);
+    color:#fff;
+  }
+
+  main{
+    padding:70px 6vw 100px;
+    background:var(--cream);
+  }
+  .content-shell{
+    max-width:980px;
+    margin:0 auto;
+    background:#fbf7ec;
+    padding:50px 46px;
+    box-shadow:0 20px 50px -28px rgba(20,30,20,.35);
+  }
+  .content-shell .eyebrow{color:var(--forest); margin-bottom:10px;}
+  .content-shell h1{
+    font-size:clamp(2rem,3.2vw,2.7rem);
+    margin:0 0 24px;
+    color:var(--deep-teal);
+  }
+  .content-shell h2{
+    font-size:1.35rem;
+    margin:24px 0 10px;
+    color:var(--deep-teal);
+  }
+  .content-shell h3{
+    font-size:1.1rem;
+    margin:0 0 8px;
+    color:var(--deep-teal);
+  }
+  .content-shell p,
+  .content-shell li{
+    color:var(--ink-soft);
+    line-height:1.8;
+    font-size:1rem;
+  }
+  .intro-card,
+  .room-card{
+    background:#fffdf8;
+    border:1px solid rgba(28,68,81,.12);
+    padding:24px;
+    margin-top:24px;
+    box-shadow:0 12px 30px -24px rgba(20,30,20,.35);
+  }
+  .intro-card{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:24px;
+    align-items:start;
+  }
+  .room-card{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:24px;
+    align-items:start;
+  }
+  .room-media{display:grid; gap:12px;}
+  .room-media img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    display:block;
+    border-radius:6px;
+  }
+
+  footer{
+    background:var(--deep-teal-2);
+    color:#c9d3cc;
+    padding:50px 6vw 26px;
+  }
+  .footer-top{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:30px;
+    max-width:1180px;
+    margin:0 auto 30px;
+    padding-bottom:30px;
+    border-bottom:1px solid rgba(255,255,255,.12);
+  }
+  .footer-brand{font-family:'Cormorant Garamond',serif; font-size:1.3rem; color:#fff;}
+  .footer-links{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    font-family:'Jost',sans-serif;
+    font-size:.82rem;
+    letter-spacing:.06em;
+  }
+  .footer-links a{color:#c9d3cc; text-decoration:none;}
+  .footer-links a:hover{color:#fff;}
+  .footer-bottom{
+    text-align:center;
+    font-family:'Jost',sans-serif;
+    font-size:.75rem;
+    letter-spacing:.06em;
+    color:#8fa196;
+  }
+
+  @media (max-width:880px){
+    nav.main-nav{gap:20px; justify-content:center; width:100%;}
+    .content-shell{padding:36px 24px;}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <div class="brand">
+      <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+        <path d="M23 6L6 20V40H18V28H28V40H40V20L23 6Z" stroke="#f2ead9" stroke-width="2" fill="none"/>
+        <path d="M4 34 Q11 28 18 34 T32 34" stroke="#c8a24a" stroke-width="2" fill="none"/>
+      </svg>
+      <div class="brand-text">Haus am Möhnesee<span>Familie Gehrken</span></div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Startseite</a>
+      <a href="das_haus.html">Das Haus</a>
+      <a href="infos.html">Infos</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="content-shell">
+    <div class="eyebrow">Ferienhaus</div>
+    <h1>Das Haus</h1>
+
+    <div class="intro-card">
+      <div>
+        <p>Das freistehende Ferienhaus liegt mitten im Grünen, in unverbauter Lage. In weniger als 10 Minuten erreicht man zu Fuß den See; in 15 Minuten die Sperrmauer. Zum Haus gehören 2 Freisitze: eine Terrasse (teilweise überdacht) zum Westen und eine Sitzmöglichkeit im Osten (Stühle, Bank und Sonnenschirm vorhanden).</p>
+      </div>
+      <div class="room-media" style="margin-top:0;">
+        <img src="images/Haus_1.jpg" alt="Außenansicht des Hauses 1">
+        <img src="images/Haus_2.jpg" alt="Außenansicht des Hauses 2">
+      </div>
+    </div>
+
+    <div class="room-card">
+      <div>
+        <h2>EG</h2>
+        <h3>Das Wohnzimmer</h3>
+        <p>Im Erdgeschoss befindet sich das geräumige Wohn- und Esszimmer. Am Esstisch können bequem 6 Personen Platz nehmen. Große Fenster sorgen für einen hellen Raum. Der Wohnraum ist mit SAT-TV und Stereoanlage ausgestattet. Eine halbgewendelte Treppe führt ins Obergeschoss.</p>
+      </div>
+      <div class="room-media">
+        <img src="images/EG_Wohnzimmer.jpg" alt="Wohnzimmer im Erdgeschoss">
+        <img src="images/EG_Wohnzimmer_2.jpg" alt="Wohnzimmer mit Essbereich">
+      </div>
+    </div>
+
+    <div class="room-card">
+      <div>
+        <h3>Die Küche</h3>
+        <p>Die nach Osten gelegene Küche ist mit allen notwendigen Geräten ausgestattet. Ein Umluftherd, eine Mikrowelle, eine Spülmaschine und eine Waschmaschine sorgen für Arbeitserleichterung.</p>
+      </div>
+      <div class="room-media">
+        <img src="images/EG_Küche.jpg" alt="Küche im Erdgeschoss">
+      </div>
+    </div>
+
+    <div class="room-card">
+      <div>
+        <h3>Das Bad</h3>
+        <p>Das Bad im Erdgeschoss verfügt über eine Dusche und ein WC.</p>
+      </div>
+      <div class="room-media">
+        <img src="images/EG_Bad.jpg" alt="Bad im Erdgeschoss">
+      </div>
+    </div>
+
+    <div class="room-card">
+      <div>
+        <h2>OG</h2>
+        <h3>Schlafzimmer</h3>
+        <p>Lage nach Westen. Vorhanden sind Doppelbetten, 2 Nachtkonsolen und ein geräumiger Kleiderschrank. Bettzeug ist für 6 Personen vorhanden, Bettwäsche ist i. d. R. mitzubringen. Ebenso Handtücher und Geschirrtücher. Wäsche ansonsten auf Anfrage.</p>
+      </div>
+      <div class="room-media">
+        <img src="images/OG_Schlafzimmer.jpg" alt="Schlafzimmer im Obergeschoss">
+      </div>
+    </div>
+
+    <div class="room-card">
+      <div>
+        <h3>Schlafzimmer 2</h3>
+        <p>Lage Süd-Osten. Das Zimmer ist mit zwei Einzelbetten und einem Kleiderschrank ausgestattet.</p>
+      </div>
+      <div class="room-media">
+        <img src="images/OG_Schlafzimmer2.jpg" alt="Schlafzimmer 2 im Obergeschoss">
+        <img src="images/OG_Schlafzimmer2_2.jpg" alt="Zusätzliches Bild zu Schlafzimmer 2">
+      </div>
+    </div>
+
+    <div class="room-card">
+      <div>
+        <h3>Schlafzimmer 3</h3>
+        <p>Lage nach Süd-Westen. Das Zimmer ist mit zwei Einzelbetten sowie einem Kleiderschrank möbliert.</p>
+      </div>
+      <div class="room-media">
+        <img src="images/OG_Schlafzimmer3.jpg" alt="Drittes Schlafzimmer im Obergeschoss">
+      </div>
+    </div>
+
+    <div class="room-card">
+      <div>
+        <h3>Bad</h3>
+        <p>Im Bad können Sie über eine Badewanne, ein Waschbecken und WC verfügen.</p>
+      </div>
+      <div class="room-media">
+        <img src="images/OG_Bad.jpg" alt="Bad im Obergeschoss">
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-bottom">© 2026 Ferienhaus Gehrken · Ferien am Möhnesee</div>
+</footer>
+</body>
+</html>
